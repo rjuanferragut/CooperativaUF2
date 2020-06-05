@@ -85,8 +85,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('users')}}">User Management</a>
-                    <a href="#">Orders</a>
+                    <a href="#">Products</a>
+                    @if (Auth::check())
+                      @if (Auth::user()->is_admin == 1)
+                        <a href="{{ route('users') }}" class="navbar-brand">Users</a>
+                        <a href="{{ route('users') }}" class="navbar-brand">Suppliers</a>
+                        <a href="{{ route('users') }}" class="navbar-brand">Orders</a>
+                      @endif
+                    @endif
                 </div>
             </div>
         </div>

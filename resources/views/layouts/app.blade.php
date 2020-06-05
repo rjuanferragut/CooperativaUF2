@@ -38,6 +38,12 @@
                         <ul class="navbar-nav mr-auto">
                           <a href="{{ route('users') }}" class="navbar-brand">Users</a>
                         </ul>
+                        <ul class="navbar-nav mr-auto">
+                          <a href="{{ route('users') }}" class="navbar-brand">Suppliers</a>
+                        </ul>
+                        <ul class="navbar-nav mr-auto">
+                          <a href="{{ route('users') }}" class="navbar-brand">Orders</a>
+                        </ul>
                         @endif
                       @endif
                     </ul>
