@@ -85,12 +85,12 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Products</a>
                     @if (Auth::check())
                       @if (Auth::user()->is_admin == 1)
-                        <a href="{{ route('users') }}" class="navbar-brand">Users</a>
-                        <a href="{{ route('users') }}" class="navbar-brand">Suppliers</a>
-                        <a href="{{ route('users') }}" class="navbar-brand">Orders</a>
+                        <a href="{{ route('users') }}">Users</a>
+                        <a href="{{ route('suppliers') }}">Suppliers</a>
+                        <a href="{{ route('#') }}">Products</a>
+                        <a href="{{ route('#') }}">Orders</a>
                       @endif
                     @endif
                 </div>

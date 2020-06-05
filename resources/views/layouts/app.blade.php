@@ -39,13 +39,16 @@
                           <a href="{{ route('users') }}" class="navbar-brand">Users</a>
                         </ul>
                         <ul class="navbar-nav mr-auto">
-                          <a href="{{ route('users') }}" class="navbar-brand">Suppliers</a>
+                          <a href="{{ route('suppliers') }}" class="navbar-brand">Suppliers</a>
                         </ul>
                         <ul class="navbar-nav mr-auto">
-                          <a href="{{ route('users') }}" class="navbar-brand">Orders</a>
+                          <a href="#" class="navbar-brand">Orders</a>
                         </ul>
                         @endif
                       @endif
+                      <ul class="navbar-nav mr-auto">
+                        <a href="{{ route('#') }}" class="navbar-brand">Products</a>
+                      </ul>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

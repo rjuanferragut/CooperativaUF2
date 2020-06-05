@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\OrderDetails;
 class OrderDetailsSeeder extends Seeder
 {
     /**
