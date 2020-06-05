@@ -31,4 +31,9 @@ class UserController extends Controller
       ]);
       return redirect()->route('users');
     }
+    public function delete($id) {
+      $user = User::where('id', $id)->first();
+      User::where('id', $user->id)->delete();
+      return redirect()->route('users');
+    }
 }

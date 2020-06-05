@@ -32,3 +32,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users', 'UserController@index')->name('users');
 Route::get('/user/{id}', 'UserController@show')->name('user');
 Route::post('/user/{id}', 'UserController@update')->name('user.update');
+Route::get('/user/delete/{id}', 'UserController@delete')->name('user.delete');
