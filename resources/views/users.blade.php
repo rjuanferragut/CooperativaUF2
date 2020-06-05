@@ -24,7 +24,7 @@
                           <td>{{ $user->name }}</td>
                           <td>{{ $user->email }}</td>
                           <td>{{ $user->is_admin }}</td>
-                          <td><a href="{{ route('user', $user->id) }}"><i class="fas fa-user-cog"></i></a></td>
+                          <td> <a href="{{ route('user', $user->id) }}"><i class="fa fa-pencil" aria-hidden="true">aa</i></a></td>
                         </tr>
                         @endforeach
                       </tbody>
