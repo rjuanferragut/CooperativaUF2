@@ -25,8 +25,12 @@
                           <td>{{ $user->email }}</td>
                           <td>{{ $user->is_admin }}</td>
                           <td>
-                             <a href="{{ route('user', $user->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                             <a href="{{ route('user.delete', $user->id) }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            @if (Auth::check())
+                              @if (Auth::user()->is_admin == 1)
+                              <a href="{{ route('user', $user->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                              <a href="{{ route('user.delete', $user->id) }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                              @endif
+                            @endif
                           </td>
                         </tr>
                         @endforeach

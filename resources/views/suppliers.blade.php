@@ -25,8 +25,12 @@
                           <td>{{ $supplier->email }}</td>
                           <td>{{ $supplier->phone }}</td>
                           <td>
-                             <a href="{{ route('supplier', $supplier->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                             <a href="{{ route('supplier.delete', $supplier->id) }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                          @if (Auth::check())
+                            @if (Auth::user()->is_admin == 1)
+                              <a href="{{ route('supplier', $supplier->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                              <a href="{{ route('supplier.delete', $supplier->id) }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            @endif
+                          @endif
                           </td>
                         </tr>
                         @endforeach

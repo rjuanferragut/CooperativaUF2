@@ -44,11 +44,11 @@
                         <ul class="navbar-nav mr-auto">
                           <a href="#" class="navbar-brand">Orders</a>
                         </ul>
+                        <ul class="navbar-nav mr-auto">
+                          <a href="#" class="navbar-brand">Products</a>
+                        </ul>
                         @endif
                       @endif
-                      <ul class="navbar-nav mr-auto">
-                        <a href="#" class="navbar-brand">Products</a>
-                      </ul>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

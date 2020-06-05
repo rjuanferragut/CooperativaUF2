@@ -21,20 +21,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 //users CRUD
-Route::get('/users', 'UserController@index')->name('users');
-Route::get('/user/{id}', 'UserController@show')->name('user');
-Route::post('/user/{id}', 'UserController@update')->name('user.update');
-Route::get('/user/delete/{id}', 'UserController@delete')->name('user.delete');
+Route::get('/users', 'UserController@index')->name('users')->middleware('auth');
+Route::get('/user/{id}', 'UserController@show')->name('user')->middleware('auth');
+Route::post('/user/{id}', 'UserController@update')->name('user.update')->middleware('auth');
+Route::get('/user/delete/{id}', 'UserController@delete')->name('user.delete')->middleware('auth');
 //Suppliers CRUD
-Route::get('/suppliers', 'SupplierController@index')->name('suppliers');
-Route::get('/supplier/{id}', 'SupplierController@show')->name('supplier');
-Route::post('/supplier/{id}', 'SupplierController@update')->name('supplier.update');
-Route::get('/supplier/delete/{id}', 'SupplierController@delete')->name('supplier.delete');
+Route::get('/suppliers', 'SupplierController@index')->name('suppliers')->middleware('auth');
+Route::get('/supplier/{id}', 'SupplierController@show')->name('supplier')->middleware('auth');
+Route::post('/supplier/{id}', 'SupplierController@update')->name('supplier.update')->middleware('auth');
+Route::get('/supplier/delete/{id}', 'SupplierController@delete')->name('supplier.delete')->middleware('auth');
