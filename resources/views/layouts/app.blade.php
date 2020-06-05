@@ -47,7 +47,7 @@
                         @endif
                       @endif
                       <ul class="navbar-nav mr-auto">
-                        <a href="{{ route('#') }}" class="navbar-brand">Products</a>
+                        <a href="#" class="navbar-brand">Products</a>
                       </ul>
                     </ul>
 
