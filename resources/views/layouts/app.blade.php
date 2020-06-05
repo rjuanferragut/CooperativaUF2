@@ -36,7 +36,7 @@
                       @if (Auth::check())
                         @if (Auth::user()->is_admin == 1)
                         <ul class="navbar-nav mr-auto">
-                          <a href="{{ route('users') }}" class="navbar-brand">Users Managment</a>
+                          <a href="{{ route('users') }}" class="navbar-brand">Users</a>
                         </ul>
                         @endif
                       @endif
