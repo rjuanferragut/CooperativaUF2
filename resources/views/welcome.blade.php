@@ -89,7 +89,7 @@
                       @if (Auth::user()->is_admin == 1)
                         <a href="{{ route('users') }}">Users</a>
                         <a href="{{ route('suppliers') }}">Suppliers</a>
-                        <a href="#">Products</a>
+                        <a href="{{ route('products') }}">Products</a>
                         <a href="#">Orders</a>
                       @endif
                     @endif

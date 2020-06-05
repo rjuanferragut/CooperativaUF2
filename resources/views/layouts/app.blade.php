@@ -42,10 +42,10 @@
                           <a href="{{ route('suppliers') }}" class="navbar-brand">Suppliers</a>
                         </ul>
                         <ul class="navbar-nav mr-auto">
-                          <a href="#" class="navbar-brand">Orders</a>
+                          <a href="{{ route('products') }}" class="navbar-brand">Products</a>
                         </ul>
                         <ul class="navbar-nav mr-auto">
-                          <a href="#" class="navbar-brand">Products</a>
+                          <a href="#" class="navbar-brand">Orders</a>
                         </ul>
                         @endif
                       @endif
