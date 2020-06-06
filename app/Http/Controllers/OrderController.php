@@ -37,6 +37,8 @@ class OrderController extends Controller
 
     public function addToCart($id)
     {
+        $product = Products::find($id);
+        $cart = session()->get('cart');
         if(!$cart){
           $cart = [
             $id => [
