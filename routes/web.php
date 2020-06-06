@@ -30,6 +30,9 @@ Route::get('/user/delete/{id}', 'UserController@delete')->name('user.delete')->m
 //Suppliers CRUD
 Route::get('/suppliers', 'SupplierController@index')->name('suppliers')->middleware('auth');
 Route::get('/supplier/{id}', 'SupplierController@show')->name('supplier')->middleware('auth');
+Route::get('/newSupplier', 'SupplierController@form')->name('supplier.form')->middleware('auth');
+
+Route::post('/supplier/create', 'SupplierController@create')->name('supplier.create')->middleware('auth');
 Route::post('/supplier/{id}', 'SupplierController@update')->name('supplier.update')->middleware('auth');
 Route::get('/supplier/delete/{id}', 'SupplierController@delete')->name('supplier.delete')->middleware('auth');
 
