@@ -44,11 +44,11 @@
                         <ul class="navbar-nav mr-auto">
                           <a href="{{ route('products') }}" class="navbar-brand">Products</a>
                         </ul>
-                        <ul class="navbar-nav mr-auto">
-                          <a href="{{ route('orders') }}" class="navbar-brand">Orders</a>
-                        </ul>
                         @endif
                       @endif
+                      <ul class="navbar-nav mr-auto">
+                        <a href="{{ route('orders') }}" class="navbar-brand">Orders</a>
+                      </ul>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

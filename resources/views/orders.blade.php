@@ -17,9 +17,7 @@
 
                           <th scope="col">
                             @if (Auth::check())
-                              @if (Auth::user()->is_admin == 1)
-                                <a href="{{ route('order.form') }}"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                              @endif
+                              <a href="{{ route('order.form') }}"><i class="fa fa-plus" aria-hidden="true"></i></a>
                             @endif
                           </th>
                         </tr>

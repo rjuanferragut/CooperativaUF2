@@ -90,8 +90,8 @@
                         <a href="{{ route('users') }}">Users</a>
                         <a href="{{ route('suppliers') }}">Suppliers</a>
                         <a href="{{ route('products') }}">Products</a>
-                        <a href="{{ route('orders') }}">Orders</a>
                       @endif
+                      <a href="{{ route('orders') }}">Orders</a>
                     @endif
                 </div>
             </div>

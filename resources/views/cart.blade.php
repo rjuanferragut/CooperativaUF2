@@ -2,7 +2,6 @@
 
 @section('content')
 @if (Auth::check())
-  @if (Auth::user()->is_admin == 1)
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-12">
@@ -45,13 +44,10 @@
                   </div>
                 </th>
               </table>
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
-  @endif
 @endif
 @endsection
