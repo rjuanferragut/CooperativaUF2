@@ -7,7 +7,7 @@
       <div class="row justify-content-center">
         <div class="col-md-12">
           <div class="card">
-            <div class="card-header">product Managment</div>
+            <div class="card-header">New Product</div>
             <div class="card-body">
               <form class="" action="{{ route('product.create') }}" method="post">
                 @csrf

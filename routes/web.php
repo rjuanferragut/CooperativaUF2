@@ -42,3 +42,8 @@ Route::get('/product/delete/{id}', 'ProductController@delete')->middleware('auth
 Route::get('/newProduct', 'ProductController@form')->middleware('auth')->name('product.form');
 Route::post('/product/create', 'ProductController@create')->middleware('auth')->name('product.create');
 Route::post('/product/{id}', 'ProductController@update')->middleware('auth')->name('product.update');
+
+//Orders
+Route::get('/orders', 'OrderController@index')->middleware('auth')->name('orders');
+Route::get('/newOrder', 'OrderController@form')->middleware('auth')->name('order.form');
+Route::get('/orderCreate', 'OrderController@create')->middleware('auth')->name('order.create');
