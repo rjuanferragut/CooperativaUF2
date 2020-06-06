@@ -13,7 +13,13 @@
                           <th scope="col">#</th>
                           <th scope="col">Name</th>
                           <th scope="col">Price</th>
-                          <th scope="col"></th>
+                          <th scope="col">
+                            @if (Auth::check())
+                              @if (Auth::user()->is_admin == 1)
+                                <a href="{{ route('product.form') }}"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                              @endif
+                            @endif
+                          </th>
                         </tr>
                       </thead>
                       <tbody>

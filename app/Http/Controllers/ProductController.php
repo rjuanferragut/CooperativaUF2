@@ -15,22 +15,22 @@ class ProductController extends Controller
     }
 
 
+    public function form()
+    {
+        return view('productForm', ['products' => Products::all()], ['suppliers' => Suppliers::all()]);
+    }
     public function create()
     {
-        //
-    }
-
-
-    public function store(Request $request)
-    {
-        //
+      $inputs = request()->all();
+      Products::create($inputs);
+      return view('products', ['products' => Products::all()]);
     }
 
     public function show($id, Request $request)
     {
       $product = Products::where('id', $request->id)->first();
-      $supplier = Suppliers::findOrFail($product->id_supplier);
-      return view('productDetails', ['product' => Products::findOrFail($id), 'supplier' => $supplier]);
+      $suppliers = Suppliers::all();
+      return view('productDetails', ['product' => Products::findOrFail($id), 'suppliers' => $suppliers]);
     }
 
     public function update(Request $request)
