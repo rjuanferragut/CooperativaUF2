@@ -47,3 +47,5 @@ Route::post('/product/{id}', 'ProductController@update')->middleware('auth')->na
 Route::get('/orders', 'OrderController@index')->middleware('auth')->name('orders');
 Route::get('/newOrder', 'OrderController@form')->middleware('auth')->name('order.form');
 Route::get('/orderCreate', 'OrderController@create')->middleware('auth')->name('order.create');
+Route::get('/cart', 'OrderController@cart')->middleware('auth')->name('order.cart');
+Route::get('addToCart/{id}', 'OrderController@addToCart')->middleware('auth')->name('order.addToCart');

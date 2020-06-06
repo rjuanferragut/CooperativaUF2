@@ -30,14 +30,39 @@ class OrderController extends Controller
       return view('orders', ['orders' => Orders::all()]);
     }
 
-    public function store(Request $request)
+    public function cart(Request $request)
     {
-        //
+        return view ("cart");
     }
 
-    public function show(Orders $orders)
+    public function addToCart($id)
     {
-        //
+        if(!$cart){
+          $cart = [
+            $id => [
+              "name" => $product->name,
+              "quantity" => 1,
+              "price" => $product->price
+            ]
+          ];
+          session()->put('cart', $cart);
+
+          return redirect()->back()->with("success", "Product added to cart successfully");
+        }
+
+        if(isset($cart[$id])){
+          $cart[$id]['quantity']++;
+          session()->put('cart',$cart);
+          return redirect()->back()->with("success", "Product added to cart successfully");
+        }
+
+        $cart[$id] = [
+          "name" => $product->name,
+          "quantity" => 1,
+          "price" => $product->price
+        ];
+        session()->put('cart',$cart);
+        return redirect()->back()->with("success", "Product added to cart successfully");
     }
 
     public function edit(Orders $orders)
