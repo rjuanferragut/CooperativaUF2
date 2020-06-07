@@ -1,3 +1,17 @@
+<h1>Cooperativa</h1>
+<p>Clone the project and install composer and npm inside</p>
+<p>1st step: create database</p>
+<p>2nd step: modify .env</p>
+<p>3rd step: php artisan migrate</p>
+<p>4th step: php artisan db:seed</p>
+<p>5th step: php artisan serve</p>
+<h2>Root user: emieza@gmail.com</h2>
+<h2>password: password</h2>
+<br/>
+<h2>simple user: lzabala@gmail.com</h2>
+<h2>password: password</h2>
+
+_______________________________________________________________________________________________________________________________________
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
