@@ -5,6 +5,7 @@ use App\User;
 use App\Orders;
 use App\OrderDetails;
 use App\Products;
+use Auth;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -22,11 +23,18 @@ class OrderController extends Controller
     {
         return view('createOrder', ['products' => Products::all()], ['users' => User::all()]);
     }
-    public function create()
+    public function create(Request $request)
     {
-      $inputs = request()->all();
-      dd($inputs);
-      Orders::create($inputs);
+
+      $user = Auth::user()->id;
+      $inputs = $request->session('cart')->all()['cart'];
+        $order = Orders::create([
+        'user_id' => $user,
+        'total' => $request["total"],
+        'comments' => "",
+          ]);
+        $order->save();
+        $request->session()->forget('cart');
       return view('orders', ['orders' => Orders::all()]);
     }
 

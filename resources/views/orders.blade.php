@@ -30,12 +30,6 @@
                           <td>{{ $order->total }}</td>
                           <td>{{ $order->comments }}</td>
                           <td>
-                          @if (Auth::check())
-                            @if (Auth::user()->is_admin == 1)
-                              <!-- <a href="{{ route('order', $order->id) }}"><i class="fa fa-pencil" aria-hidden="true"></i></a> -->
-                              <a href="{{ route('order.delete', $order->id) }}"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                            @endif
-                          @endif
                           </td>
                         </tr>
                         @endforeach

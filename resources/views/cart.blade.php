@@ -27,7 +27,9 @@
                     </tr>
                   </thead>
                   @foreach(session('cart') as $id => $details)
-                    <?php $valor += $details['price'] ?>
+                    <?php
+                      $valor += $details['price'] * $details['quantity'];
+                    ?>
                     <tr>
                       <th>{{ $details['name'] }}</th>
                       <th>{{ $details['price'] }}€</th>
@@ -44,6 +46,10 @@
                   </div>
                 </th>
               </table>
+              <form class="" action="{{ route('order.create') }}" method="get">
+                <input type="number" name="total" value="{{$valor}}" hidden>
+                <button  type="submit" class="btn btn-secondary col-md-3  btn-lg btn-block">Comprar</button>
+              </form>
             </div>
           </div>
         </div>
