@@ -32,7 +32,7 @@ class OrderController extends Controller
         $order = Orders::create([
         'user_id' => $user,
         'total' => $request["total"],
-        'comments' => $comment,
+        'comments' => mb_strimwidth($comment, 0, 254, "...")
           ]);
         $order->save();
         $request->session()->forget('cart');
