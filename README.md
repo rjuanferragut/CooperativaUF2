@@ -5,11 +5,11 @@
 <p>3rd step: php artisan migrate</p>
 <p>4th step: php artisan db:seed</p>
 <p>5th step: php artisan serve</p>
-<p>Root user: emieza@gmail.com</p>
-<p>password: password</p>
+<h2>Root user: emieza@gmail.com</h2>
+<h2>password: password</h2>
 <br/>
-<p>simple user: lzabala@gmail.com</p>
-<p>password: password</p>
+<h2>simple user: lzabala@gmail.com</h2>
+<h2>password: password</h2>
 
 _______________________________________________________________________________________________________________________________________
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
