@@ -28,10 +28,11 @@ class OrderController extends Controller
 
       $user = Auth::user()->id;
       $inputs = $request->session('cart')->all()['cart'];
+      $comment = json_encode($inputs);
         $order = Orders::create([
         'user_id' => $user,
         'total' => $request["total"],
-        'comments' => "",
+        'comments' => $comment,
           ]);
         $order->save();
         $request->session()->forget('cart');
